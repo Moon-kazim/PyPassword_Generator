@@ -22,11 +22,16 @@ for numb in range(1, k_numbers+1):
 
 #using random.shuffle()function
 shuffled_password = random.sample(password_list, len(password_list))
-print(password_list)
+# print(password_list)
 random.shuffle(password_list)
-print(shuffled_password)
+# print(shuffled_password)
 
 #converting list into string
-password = "".join(shuffled_password)
-print(password)
+# password = "".join(shuffled_password)
+# print(password)
 
+# converting list into string, using for
+password = ""
+for char in shuffled_password:
+    password += char
+print(f"your password generated is: {password}")
