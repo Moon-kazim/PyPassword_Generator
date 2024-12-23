@@ -11,24 +11,22 @@ k_letters = int(input("How many letters would you like to print in your password
 k_symbols = int(input("How many symbols would you like? "))
 k_numbers = int(input("How many numbers would you like? "))
 
-password = ""
+password_list = []
 
 for char in range(1, k_letters+1):
-    password += random.choice(letters)
+    password_list += random.choice(letters)
 for symb in range(1, k_symbols+1):
-    password += random.choice(symbols)
+    password_list += random.choice(symbols)
 for numb in range(1, k_numbers+1):
-    password += random.choice(numbers)
+    password_list += random.choice(numbers)
 
-shuffled_password = random.sample(password, len(password))
-print(password)
-# random.shuffle(password)
+#using random.shuffle()function
+shuffled_password = random.sample(password_list, len(password_list))
+print(password_list)
+random.shuffle(password_list)
 print(shuffled_password)
 
-
-
-# new_password = random.shuffle(password)
-
-# print(new_password)
-
+#converting list into string
+password = "".join(shuffled_password)
+print(password)
 
